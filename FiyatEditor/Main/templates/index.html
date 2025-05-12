@@ -5,7 +5,7 @@
     <form action="{% url 'index_form' %}" method="POST">
         {% csrf_token %}
         Başlık Metni (Tarih): <input type="text" class="tarih" name="date" id="date" placeholder="Örn: 25 ŞUBAT 2025 PERŞEMBE" required>
-     <table>
+     <table class="fiyat">
         <tr>
             <th id="title-biber">Biberler (₺)</th>
             <th>Önce</th>
@@ -19,9 +19,9 @@
             
         </tr>
         {% endfor %}
-     </table>
+     </table class="fiyat">
      <br>
-     <table>
+     <table class="fiyat">
         <tr>
             <th id="title-domates">Domatesler (₺)</th>
             <th>Önce</th>
@@ -38,7 +38,7 @@
         
      </table>
      <br>
-     <table>
+     <table class="fiyat">
         <tr>
             <th id="title-salata">Salatalıklar (₺)</th>
             <th>Önce</th>
@@ -55,7 +55,7 @@
         
      </table>
      <br>
-     <table>
+     <table class="fiyat">
         <tr>
             <th id="title-patlican">Patlıcanlar (₺)</th>
             <th>Önce</th>
@@ -72,7 +72,7 @@
         
      </table>
      <br> 
-     <table>
+     <table class="fiyat">
         <tr>
             <th id="title-kabaklar">Kabaklar (₺)</th>
             <th>Önce</th>
@@ -90,5 +90,6 @@
      <br>
      <input type="submit" value="Tabloyu Oluştur">
         </form>
+        <br>
         <p>&copy; 2025 <a target="_blank" href="https://www.github.com/koray-killi">koray-killi</a> tarafından <b>Kızılağaç Tarım</b> için yapılmıştır.</p>
 {% endblock %}

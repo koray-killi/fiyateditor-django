@@ -23,9 +23,9 @@ p.title {
     border: 3px solid black;
     border-radius: 30px;
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3); /* Hafif kayık gölge */
-    width: 90%; /* Genişlik */
+    width: 90%;/* Genişlik */
     max-width: 800px; /* Maksimum genişlik */
-    height: auto; /* İçeriğe göre yükseklik */
+    height: min-content; /* İçeriğe göre yükseklik */
     background: white; /* Beyaz arka plan */
     border-radius: 50px; /* Yuvarlak kenarlar */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Hafif gölge */
@@ -36,7 +36,12 @@ p.title {
     text-align: center;
 }
 
-
+.fiyat {
+    margin: 0 auto;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 50%;
+}
 h1{
     text-align: center;
 }
