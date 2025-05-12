@@ -17,7 +17,7 @@ This project is a version of an application originally developed using the Flask
 -   💾 Store product prices in the database
 
 ## 🗂️ Project Structure
-
+ ```
 fiyateditor-django/
 ├── FiyatEditor/
 │   ├── FiyatEditor/           # Django project main directory
@@ -43,7 +43,7 @@ fiyateditor-django/
 │   └── test.py                # Additional test file
 ├── venv/                      # Virtual environment folder
 └── requirements.txt           # Dependencies list
-
+ ```
 ## 🚀 Installation
 
 1.  Clone the repository:
