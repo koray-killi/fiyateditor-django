@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1^87x^&unjjh*h05uw4fnhu-z0v9kg(541c7!yq%9u-d8d&b%(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','127.0.0.1:8000']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','127.0.0.1:8000','koray07jet.pythonanywhere.com']
 
 
 # Application definition
@@ -118,6 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+#STATIC_ROOT = '/home/koray07jet/FiyatEditor/Main/static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
