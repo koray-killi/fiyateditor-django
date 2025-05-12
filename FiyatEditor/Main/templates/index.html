@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% block body %}
+    <h1>Kızılağaç Tarım Piyasa Tablosu Oluşturucu</h1>
+    <form action="{% url 'index_form' %}" method="POST">
+        {% csrf_token %}
+        Başlık Metni (Tarih): <input type="text" class="tarih" name="date" id="date" placeholder="Örn: 25 ŞUBAT 2025 PERŞEMBE" required>
+     <table>
+        <tr>
+            <th id="title-biber">Biberler (₺)</th>
+            <th>Önce</th>
+            <th>Bugün</th>
+        </tr>
+        {% for i in biberler %}
+        <tr>
+            <th>{{i.shown_name}}</th>
+            <td><input type="number" step="0.01" name="{{i.name}}-once" id="{{i.name}}-once" value="{{i.price}}" placeholder="Örn 10.54" required autocomplete="off"></td>
+            <td><input type="number" step="0.01" name="{{i.name}}-bugun" id="{{i.name}}-bugun" placeholder="Örn 10.54" required autocomplete="off"></td>
+            
+        </tr>
+        {% endfor %}
+     </table>
+     <br>
+     <table>
+        <tr>
+            <th id="title-domates">Domatesler (₺)</th>
+            <th>Önce</th>
+            <th>Bugün</th>
+        </tr>
+        {% for i in domatesler %}
+        <tr>
+            <th>{{i.shown_name}}</th>
+            <td><input type="number" step="0.01" name="{{i.name}}-once" id="{{i.name}}-once" placeholder="Örn 10.54" value="{{i.price}}" autocomplete="off"></td>
+            <td><input type="number" step="0.01" name="{{i.name}}-bugun" id="{{i.name}}-bugun" placeholder="Örn 10.54" required autocomplete="off"></td>
+            
+        </tr>
+        {% endfor %}
+        
+     </table>
+     <br>
+     <table>
+        <tr>
+            <th id="title-salata">Salatalıklar (₺)</th>
+            <th>Önce</th>
+            <th>Bugün</th>
+        </tr>
+        {% for i in salataliklar %}
+        <tr>
+            <th>{{i.shown_name}}</th>
+            <td><input type="number" step="0.01" name="{{i.name}}-once" id="{{i.name}}-once" value = "{{i.price}}" placeholder="Örn 10.54" required autocomplete="off"></td>
+            <td><input type="number" step="0.01" name="{{i.name}}-bugun" id="{{i.name}}-bugun" placeholder="Örn 10.54" required autocomplete="off"></td>
+            
+        </tr>
+        {% endfor %}
+        
+     </table>
+     <br>
+     <table>
+        <tr>
+            <th id="title-patlican">Patlıcanlar (₺)</th>
+            <th>Önce</th>
+            <th>Bugün</th>
+        </tr>
+        {% for i in patlicanlar %}
+        <tr>
+            <th>{{i.shown_name}}</th>
+            <td><input type="number" step="0.01" name="{{i.name}}-once" id="{{i.name}}-once" value = "{{i.price}}" placeholder="Örn 10.54" required autocomplete="off"></td>
+            <td><input type="number" step="0.01" name="{{i.name}}-bugun" id="{{i.name}}-bugun" placeholder="Örn 10.54" required autocomplete="off"></td>
+            
+        </tr>
+        {% endfor %}
+        
+     </table>
+     <br> 
+     <table>
+        <tr>
+            <th id="title-kabaklar">Kabaklar (₺)</th>
+            <th>Önce</th>
+            <th>Bugün</th>
+        </tr>
+        {% for i in kabaklar %} 
+        <tr>
+            <th>{{i.shown_name}}</th>
+            <td><input type="number" step="0.01" name="{{i.name}}-once" id="{{i.name}}-once" value = "{{i.price}}" placeholder="Örn 10.54" required autocomplete="off"></td>
+            <td><input type="number" step="0.01" name="{{i.name}}-bugun" id="{{i.name}}-bugun" placeholder="Örn 10.54" required autocomplete="off"></td>
+            
+        </tr>
+        {% endfor %}
+     </table>
+     <br>
+     <input type="submit" value="Tabloyu Oluştur">
+        </form>
+        <p>&copy; 2025 <a target="_blank" href="https://www.github.com/koray-killi">koray-killi</a> tarafından <b>Kızılağaç Tarım</b> için yapılmıştır.</p>
+{% endblock %}

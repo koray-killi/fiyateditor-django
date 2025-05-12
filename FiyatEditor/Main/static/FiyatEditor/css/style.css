@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s ease infinite;
+}
+p.title {
+    display: inline;
+    margin: 50px;
+}
+
+
+.container {
+    border: 3px solid black;
+    border-radius: 30px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3); /* Hafif kayık gölge */
+    width: 90%; /* Genişlik */
+    max-width: 800px; /* Maksimum genişlik */
+    height: auto; /* İçeriğe göre yükseklik */
+    background: white; /* Beyaz arka plan */
+    border-radius: 50px; /* Yuvarlak kenarlar */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    padding: 20px; /* İç boşluk */
+    margin: 20px auto; /* Ortalamak için */
+    position: relative;
+    align-self: center;
+    text-align: center;
+}
+
+
+h1{
+    text-align: center;
+}
+input[type="text"], textarea {
+    display:inline;
+    font-size: 13px;
+    width: 60%;
+}
+input[type="text"].tarih{
+    padding: 5px;
+    margin: 20px auto;
+}
+input[type="submit"] {
+    border: 3px solid black;
+    border-radius: 30px;
+    font-family: "Roboto Condensed";
+    background-color: aquamarine;
+    border-color: black;
+    border-width: 2px;
+    width: 50%;
+    align-self: center;
+    font-size: 15px;
+    background-color: #4CAF50; /* Yeşil arka plan */
+    color: white; /* Beyaz yazı */
+    padding: 10px 20px; /* İç boşluk */
+    font-size: 16px; /* Yazı boyutu */ /* Kenarlık kaldırma */
+    border-radius: 5px; /* Kenarları yuvarlatma */
+    cursor: pointer; /* Üzerine gelince el işareti */
+}
+button{
+    border: 3px solid black;
+    border-radius: 30px;
+    font-family: "Roboto Condensed";
+    background-color: aquamarine;
+    border-color: black;
+    border-width: 2px;
+    width: 50%;
+    align-self: center;
+    font-size: 15px;
+    background-color: #4CAF50; /* Yeşil arka plan */
+    color: white; /* Beyaz yazı */
+    padding: 10px 20px; /* İç boşluk */
+    font-size: 16px; /* Yazı boyutu */ /* Kenarlık kaldırma */
+    border-radius: 5px; /* Kenarları yuvarlatma */
+    cursor: pointer; /* Üzerine gelince el işareti */
+}
+button.indir{
+    border: 3px solid black;
+    border-radius: 30px;
+    font-family: "Roboto Condensed";
+    background-color: aquamarine;
+    border-color: black;
+    border-width: 2px;
+    width: 50%;
+    align-self: center;
+    background-color: #af574c; /* Yeşil arka plan */
+    color: white; /* Beyaz yazı */
+    padding: 10px; /* İç boşluk */
+    font-size: 20px; /* Yazı boyutu */ /* Kenarlık kaldırma */
+    border-radius: 5px; /* Kenarları yuvarlatma */
+    cursor: pointer; /* Üzerine gelince el işareti */
+}
+    
+
+input[type="submit"]:hover{
+    background-color: #45a049; /* Daha koyu yeşil */
+}
+input[type="submit"]:active{
+    background-color: #3e8e41;
+    transform: scale(0.98); /* Hafif küçültme efekti */ /* Daha koyu yeşil */
+}
+
+
+table {
+    border-collapse:collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color:   lightgray;
+}
+
+th#title-biber{
+    background-color: rgb(43, 141, 72);
+    color: white;
+}
+th#title-domates{
+    background-color: rgb(141, 50, 43);
+    color: white;
+}
+th#title-salata{
+    background-color: rgb(43, 126, 141);
+    color: white;
+}
+th#title-patlican{
+    background-color: rgb(61, 43, 141);
+    color: white;
+}
+th#title-kabak{
+    background-color: rgb(141, 79, 43);
+    color: white;
+}
