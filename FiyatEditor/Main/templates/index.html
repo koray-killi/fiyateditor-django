@@ -2,6 +2,20 @@
 <!DOCTYPE html>
 {% block body %}
     <h1>Kızılağaç Tarım Piyasa Tablosu Oluşturucu</h1>
+    <button class="info" id="info" onclick="mesajGoster()">Bilgilendirme</button>
+    
+    <script>
+        function mesajGoster() {
+             Swal.fire({
+                title: 'Nasıl Kullanılır?',
+                text: 'Sebze meyve fiyat listesi görselleştirici program. Programı kullanmak için gerekli fiyatları (4.5) tarzı noktalı formatta yazmalısınız, boş geçilmesini istediğiniz ürünler için önceki ve sonraki fiyata 0 değerini giriniz. İletişim adresimiz: koraykll07@gmail.com ',
+                icon: 'question', // 'success', 'error', 'warning', 'info', 'question' olabilir
+                confirmButtonText: 'Tamam'
+            });
+        }
+    </script>
+
+
     <form action="{% url 'index_form' %}" method="POST">
         {% csrf_token %}
         Başlık Metni (Tarih): <input type="text" class="tarih" name="date" id="date" placeholder="Örn: 25 ŞUBAT 2025 PERŞEMBE" required>
@@ -88,7 +102,7 @@
         {% endfor %}
      </table>
      <br>
-     <input type="submit" value="Tabloyu Oluştur">
+     <input type="submit" class="button" value="Tabloyu Oluştur">
         </form>
         <br>
         <p>&copy; 2025 <a target="_blank" href="https://www.github.com/koray-killi">koray-killi</a> tarafından <b>Kızılağaç Tarım</b> için yapılmıştır.</p>

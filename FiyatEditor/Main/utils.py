@@ -46,6 +46,9 @@ class ImageCreation():
         # The method that easily gets the data from the lists and drawing this data as text between desired spaces.
         def draw_table(start_x,start_y,desired_list,color,font,is_yesterday,line=0,lineadder=31,prefix="",suffix=" TL",skip_index=None,ex_args=None,ex_blank=None,font_size=None):
             for selected_object in desired_list:
+                if selected_object.yesterday_price == 0 and selected_object.today_price == 0:
+                    line+=lineadder
+                    continue
                 # Exception Handling
                 if desired_list.index(selected_object) == skip_index:
                     continue
